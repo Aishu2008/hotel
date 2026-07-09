@@ -157,7 +157,9 @@ while True:
     print("2. View Customer")
     print("3. Update Customer")
     print("4. Delete Customer")
-    print("5. Exit")
+    print("5. Hotel Services")
+    print("6. Hotel Rules")
+    print("7. Exit")
 
     option = input("Enter Your Option: ")
 
@@ -170,6 +172,10 @@ while True:
     elif option == "4":
         Delete_customer()
     elif option == "5":
+        hotel_services()
+    elif option == "6":
+        hotel_rules()
+    elif option == "7":
         bye()
         break
     else:
