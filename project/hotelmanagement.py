@@ -1,9 +1,5 @@
 #hotel management
 
-print("="*50)
-print("WELCOME TO 5 star HOTEL MANAGEMENT ")
-print("="*50)
-
 import pymysql
 
 # Database Connection
@@ -22,17 +18,17 @@ def recepit(name, room_type, days, bill):
     print(f"Room Type: {room_type}")
     print(f"Number of Days: {days}")
     print(f"Total Bill: {bill}")
-    print("="*30)
+    print("=" * 30)
     
 # Add Customer
 def Add_customer():
     name = input("Enter Customer Name: ")
-    room_type = input("Enter Room Type (AC/Non AC): ")
+    room_type = input("Enter Room Type (AC/Non AC): ").lower()
     days = int(input("Enter Number of Days: "))
 
-    if room_type.lower() == "ac":
+    if room_type == "ac":
         bill = days * 1500
-    elif room_type.lower() == "non ac":
+    elif room_type == "non ac":
         bill = days * 1000
     else:
         print("Invalid Room Type")
@@ -65,9 +61,9 @@ def Update_customer():
     room_type = input("Enter Room Type: ")
     days = int(input("Enter Number of Days: "))
 
-    if room_type.lower() == "ac":
+    if room_type == "ac":
         bill = days * 1500
-    elif room_type.lower() == "non ac":
+    elif room_type == "non ac":
         bill = days * 1000
     else:
         print("Invalid Room Type")
